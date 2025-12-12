@@ -10,8 +10,9 @@
 
 <body>
 
-    <!-- Tim nền -->
+    <!-- Nền trái tim -->
     <div class="heart-bg"></div>
+
     <!-- Nội dung -->
     <div class="container">
         <h2>Chúc Mừng Sinh Nhật</h2>
@@ -23,8 +24,11 @@
     <!-- Tim bay -->
     <div id="heart-container"></div>
 
+    <!-- Popup -->
     <div id="popup" class="popup hidden">
         <div class="popup-box">
+
+
             <h3>Chúc Mừng Sinh Nhật Em Yêu</h3>
 
             <p id="popupText"></p>
@@ -33,8 +37,22 @@
         </div>
     </div>
 
+    <!-- Canvas pháo hoa -->
     <canvas id="fireworksCanvas"></canvas>
 
+    <!-- Nhạc nền -->
+    <audio id="bg-music" src="assets/music/at.mp3" autoplay loop></audio>
+
+    <script>
+        // Ẩn player audio
+        document.getElementById("bg-music").style.display = "none";
+
+        // Đảm bảo autoplay hoạt động sau click đầu
+        document.addEventListener("click", () => {
+            const bg = document.getElementById("bg-music");
+            if (bg.paused) bg.play();
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>

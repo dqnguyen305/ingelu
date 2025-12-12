@@ -164,7 +164,7 @@ function typeText() {
     if (typingIndex < message.length) {
         popupText.textContent += message.charAt(typingIndex);
         typingIndex++;
-        typingTimer = setTimeout(typeText, 48); // tốc độ gõ (ms)
+        typingTimer = setTimeout(typeText, 88); // tốc độ gõ (ms)
     }
 }
 
@@ -182,4 +182,3 @@ closePopup.addEventListener("click", () => {
     clearTimeout(typingTimer);
     stopFireworks();
 });
-
